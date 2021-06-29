@@ -1,7 +1,7 @@
 let units = 'metric';
 
 const getGeoCode = (searchInput) => {
-    let GeoCodingUri =`http://api.openweathermap.org/geo/1.0/direct?q=${searchInput}&limit=1&appid=e9a7f0b75b40a02d4fb5055300a92bd9`;
+    let GeoCodingUri =`https://api.openweathermap.org/geo/1.0/direct?q=${searchInput}&limit=1&appid=e9a7f0b75b40a02d4fb5055300a92bd9`;
         // console.log(GeoCodingUri);
     let geoCodeData;
     fetch(GeoCodingUri)
@@ -212,7 +212,7 @@ locationbtn.addEventListener('click',() => {
 const showPosition = ((position) => {
     let latt = (position.coords.latitude).toFixed(4);
     let logn = (position.coords.longitude).toFixed(4);
-    let reverseGeocodeUri = `http://api.openweathermap.org/geo/1.0/reverse?lat=${latt}&lon=${logn}&limit=1&appid=e9a7f0b75b40a02d4fb5055300a92bd9`;
+    let reverseGeocodeUri = `https://api.openweathermap.org/geo/1.0/reverse?lat=${latt}&lon=${logn}&limit=1&appid=e9a7f0b75b40a02d4fb5055300a92bd9`;
     console.log('rever -- '+reverseGeocodeUri);
 
     fetch(reverseGeocodeUri)
@@ -227,5 +227,3 @@ const showPosition = ((position) => {
         window.alert(error);
     })
 })
-
-// http://api.openweathermap.org/geo/1.0/reverse?lat=15.9128&lon=79.7399&limit=1&appid=e9a7f0b75b40a02d4fb5055300a92bd9
