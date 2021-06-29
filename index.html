@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="daily,daily weather,weather,forecast week, weekly forecast,weekly weather,wind,snow,humidity,humid,weather forecast,sunrise,sunset,cloudy,cloud,rain,rainy, sunny,sun,moon,sky,earth,clouds,snowy,windy,strom,lightning,half moon">
+    <title>Weather | Daily and Weekly Forecast</title>
+
+    <link rel='icon' href='icons/earth.png' type='image/x-icon' />
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css">
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container bg-white my-3" id="container-main">
+        <div class="row">
+          <div class="col-3 p-3">
+
+            <!-- input group search -->
+            <div class="input-group ">
+              <input type="text" name="search" id="search" placeholder="Search for places..." class="form-control">
+              <div class="input-group-append">
+                <button class="btn btn-secondary" id="search-btn" type="button"><i class="fa fa-search" aria-hidden="true"></i></button>
+              </div>
+            </div>
+
+            <!-- locate button -->
+            <div class="locate text-center my-2 p-2 rounded"  id="location">
+              Enable location <span class="mx-2"><i class="fa fa-location-arrow"  aria-hidden="true"></i></span>
+            </div>
+            
+            <!-- current temp main div -->
+
+            <div class="main-current-temp mt-2 px-3">
+              <div class="text-center">
+                <img src="icons\Cloudy.svg" alt="cloudy" class="img-fluid current-temp-icon" id="currentWeatherImg">
+              </div>
+              <div class="temp-number">
+                <p class="display-3"><span id='degress'>12</span><sup>o</sup><span class="display-4" id= 'metrics'>C</span></p>
+                <p><span id="currentDay">Monday</span>
+                </p>
+              </div>
+
+              <hr>
+          
+              <div class="currentDay-stats">
+                <p><span id="weatherDesc">Mostly Cloudy</span> </p>
+                <p>Cloudiness - <span id="cloudiness">90</span>%<span class="px-2"><i class="fa fa-cloud" aria-hidden="true"></i></span></p>
+                <div class="city-card text-center p-1 rounded">
+                  <p class="h5 text-light" id="City">Guntur, AP, IN</p>
+                </div>
+              </div>
+            </div>
+
+          </div>
+          <div class="col-9 column2">
+            <div class="secondSection p-2 pt-4 ml-3">
+              <div class="heading d-flex jusfity-content-center">
+                <p class="h4">Week</p>
+                <div class="mainUnitsDiv d-flex ml-auto">
+                  <div class="unitsdiv h5 p-2 px-3 active rounded-left" id="celsius">
+                    <sup>o</sup>C
+                  </div>
+                  <div class="unitsdiv h5 p-2 px-3 rounded-right" id="farhen">
+                    <sup>o</sup>F
+                  </div>
+                </div>
+              </div>
+
+              <div class="weekforecastSection mt-2">
+                <div class="row" id="weekRow">
+                  <div class="col-2 p-2 weekcard mx-1 b-radius text-center">
+                    <p id="1-dayDate" class="gray-color">
+
+                    </p>
+                    <img src="" alt="" id="1-forecastImg" class="img-fluid">
+                    <p class="font-weight-bold">
+                      <span id="1-forecastTemp"></span><sup>o</sup>
+                    </p>
+                    <p id="1-forecastDesc">
+
+                    </p>
+                  </div>
+
+                  <div class="col-2 p-2 weekcard mx-1 b-radius text-center">
+                    <p id="2-dayDate" class="gray-color">
+
+                    </p>
+                    <img src="" alt="" id="2-forecastImg" class="img-fluid">
+                    <p class="font-weight-bold">
+                      <span id="2-forecastTemp"></span><sup>o</sup>
+                    </p>
+                    <p id="2-forecastDesc">
+
+                    </p>
+                  </div>
+
+                  <div class="col-2 p-2 weekcard mx-1 b-radius text-center">
+                    <p id="3-dayDate" class="gray-color">
+
+                    </p>
+                    <img src="" alt="" id="3-forecastImg" class="img-fluid">
+                    <p class="font-weight-bold">
+                      <span id="3-forecastTemp"></span><sup>o</sup>
+                    </p>
+                    <p id="3-forecastDesc">
+
+                    </p>
+                  </div>
+
+                  <div class="col-2 p-2 weekcard mx-1 b-radius text-center">
+                    <p id="4-dayDate" class="gray-color">
+
+                    </p>
+                    <img src="" alt="" id="4-forecastImg" class="img-fluid">
+                    <p class="font-weight-bold">
+                      <span id="4-forecastTemp"></span><sup>o</sup>
+                    </p>
+                    <p id="4-forecastDesc">
+
+                    </p>
+                  </div>
+
+                  <div class="col-2 p-2 weekcard mx-1 b-radius text-center">
+                    <p id="5-dayDate" class="gray-color">
+
+                    </p>
+                    <img src="" alt="" id="5-forecastImg" class="img-fluid">
+                    <p class="font-weight-bold">
+                      <span id="5-forecastTemp"></span><sup>o</sup>
+                    </p>
+                    <p id="5-forecastDesc">
+
+                    </p>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Highlights -->
+              <div class="heading my-3">
+                <p class="h5 font-weight-bold">Today's Highlights</p>
+              </div>
+
+              <div class="todaysHighlightSection">
+                <div class="row">
+                  <div class="col-3 p-2 highlightCard mx-1 b-radius d-flex jusfity-content-center align-items-center">
+                    <img src="icons/thermometer.png" alt="feels-like"class="img-fluid">
+                    <p class="text-center mt-2">
+                      <span>Feels Like</span> <br> 
+                      <span class="h4">
+                        <span id="feelsLike">12</span><sup>o</sup>
+                      </span>
+                    </p>
+                  </div>
+
+                  <div class="col-3 p-2 highlightCard mx-1 b-radius text-center d-flex jusfity-content-center align-items-center">
+                    <img src="icons/wind.png" alt="wind" class="img-fluid w-25 h-75 ml-2">
+                    <p class="text-center mt-2 ml-3">
+                      <span>Wind speed</span> <br> 
+                      <span class="h4">
+                        <span id="wind">12</span><span class="h6"> km/hr</span>
+                      </span>
+                    </p>
+                  </div>
+
+                  <div class="col-3 p-2 highlightCard mx-1 b-radius text-center d-flex jusfity-content-center align-items-center">
+                    <i class="fa fa-tint fa-3x ml-2" aria-hidden="true"></i>
+                    <p class="text-center mt-2 ml-5">
+                      <span>Humidity</span> <br> 
+                      <span class="h4">
+                        <span id="humidity">12</span><span class="h6"> %</span>
+                      </span>
+                    </p>
+                  </div>
+                </div>
+
+                <div class="row my-3">
+                  <div class="col-3 p-2 highlightCard mx-1 b-radius d-flex jusfity-content-center align-items-center">
+                    <img src="icons/pressure.png" alt="feels-like"class="img-fluid ml-4">
+                    <p class="text-center mt-2 ml-3">
+                      <span>Pressure</span> <br> 
+                      <span class="h4">
+                        <span id="pressure">1200</span><span class="h6"> hPa</span>
+                      </span>
+                    </p>
+                  </div>
+
+                  <div class="col-3 p-2 highlightCard mx-1 b-radius text-center d-flex jusfity-content-center align-items-center">
+                    <img src="icons/eye.png" alt="wind" class="img-fluid ml-3">
+                    <p class="text-center mt-2 ml-4">
+                      <span>Visibility</span> <br> 
+                      <span class="h4">
+                        <span id="visibility">12</span><span class="h6"> km</span>
+                      </span>
+                    </p>
+                  </div>
+
+                  <div class="col-3 p-2 highlightCard mx-1 b-radius text-center d-flex jusfity-content-center align-items-center">
+                    <img src="icons/sunset.png" alt="wind" class="img-fluid ml-3">
+                    <div>
+                      <p class="text-center mt-2 ml-2">
+                        Sunrise - <span class="font-weight-bold" id="sunrise">06:00</span> 
+                      </p>
+                      <p class="text-center ml-2">
+                        Sunset &nbsp;- <span class="font-weight-bold" id="sunset">18:00</span> 
+                      </p>
+                    </div>
+                    
+                  </div>
+                </div>
+
+              </div>
+            </div>
+          </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

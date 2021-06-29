@@ -1,0 +1,61 @@
+body {
+    background-color: #fff
+    /* #a4a6ac91; */
+}
+
+#container-main {
+    border-radius: 20px;
+    background-image: url('icons/25503.jpg');
+     background-position: center;
+     background-size: cover;
+}
+
+.column2 {
+    /* background-color: #F6F6F8; */
+    /* background-color: #0099ff65;
+     */
+     /* background-image: url('icons/25503.jpg');
+     background-position: center;
+     background-size: cover; */
+    border-top-right-radius: 20px;
+    border-bottom-right-radius: 20px;
+}
+
+.input-radius {
+    /* border-radius: 15px; */
+    background-color: #F6F6F8;
+}
+
+#location:hover {
+    cursor: pointer;
+    background-color: #6c757d;
+    color: #fff;
+}
+
+.current-temp-icon {
+    height: 180px;
+}
+
+.city-card {
+    background: linear-gradient(to right,#007bffa2,#17a3b8b9);
+    /* background-image: url(citycard.JPG); */
+}
+
+.unitsdiv, .weekcard, .highlightCard {
+    background-color: rgba(255, 255, 255, 0.733);
+    /* border-radius: 80%; */
+}
+
+.active, .unitsdiv:hover {
+    cursor: pointer;
+    background-color: rgba(0, 0, 0, 0.767);
+    color: white;
+}
+
+.b-radius {
+    border-radius: 10px;
+}
+
+.gray-color {
+    color: #515153;;
+}
